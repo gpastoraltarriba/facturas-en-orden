@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Facturas en orden — Tus facturas, ordenadas solas</title>
+    <meta name="description" content="Para bares, restaurantes, oficios y empresas de limpieza en St. Gallen. Haces una foto al ticket y nosotros nos encargamos de que llegue ordenado a tu gestor.">
+    <meta name="theme-color" content="#0C2340">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230C2340'/%3E%3Crect x='9' y='6' width='14' height='20' rx='2' fill='%23F4F0E8'/%3E%3Crect x='12' y='11' width='8' height='2' rx='1' fill='%23E2A52E'/%3E%3Crect x='12' y='16' width='8' height='1.6' rx='.8' fill='%230C2340'/%3E%3Crect x='12' y='20' width='5' height='1.6' rx='.8' fill='%230C2340'/%3E%3C/svg%3E" type="image/svg+xml">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Facturas en orden">
+    <meta property="og:title" content="Facturas en orden — Tus facturas, ordenadas solas">
+    <meta property="og:description" content="Para bares, restaurantes, oficios y empresas de limpieza en St. Gallen. Haces una foto al ticket y nosotros nos encargamos de que llegue ordenado a tu gestor.">
+    <!-- Placeholder: sustituir og-image.png si quieres otra imagen antes de publicar. -->
+    <meta property="og:image" content="og-image.png">
+    <meta property="og:image:alt" content="Facturas en orden. St. Gallen.">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Facturas en orden — Tus facturas, ordenadas solas">
+    <meta name="twitter:description" content="Para bares, restaurantes, oficios y empresas de limpieza en St. Gallen. Haces una foto al ticket y nosotros nos encargamos de que llegue ordenado a tu gestor.">
+    <meta name="twitter:image" content="og-image.png">
+    <meta name="twitter:image:alt" content="Facturas en orden. St. Gallen.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "Segoe UI", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="flex min-h-screen flex-col font-sans antialiased">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="sticky top-0 z-40 bg-[var(--navy)] text-[var(--cream)]">
+      <div class="h-1 bg-[var(--amber)]" aria-hidden="true"></div>
+      <div class="wrap flex flex-wrap items-center gap-x-6 gap-y-2 py-3 lg:py-3.5">
+        <a class="mr-auto inline-flex items-center gap-2 text-base font-bold tracking-tight text-[var(--cream)] no-underline" href="#contenido">
+          <span class="mark" aria-hidden="true"></span>
+          Facturas en orden
+        </a>
+        <nav class="order-3 flex w-full flex-wrap gap-x-4 gap-y-1 text-sm lg:order-none lg:w-auto" aria-label="Secciones">
+          <a class="nav-link" href="#como-funciona">Cómo funciona</a>
+          <a class="nav-link" href="#incluye">Qué incluye</a>
+          <a class="nav-link" href="#precio">Precio</a>
+          <a class="nav-link" href="#preguntas">Preguntas</a>
+          <a class="nav-link" href="#contacto">Contacto</a>
+        </nav>
+        <div class="lang-switch" data-lang-switch role="group" aria-label="Idioma">
+          <span class="lang-current" aria-current="true">ES</span>
+          <button type="button" class="lang-de" aria-expanded="false" aria-describedby="de-tooltip">DE</button>
+          <p id="de-tooltip" class="lang-tip" role="tooltip">Pronto en alemán</p>
+        </div>
+        <a class="btn btn-primary hidden lg:inline-flex" href="#contacto">Revisión gratis</a>
+      </div>
+    </header>
+
+    <main id="contenido" class="flex-1">
+      <section class="py-14 sm:py-20" aria-labelledby="hero-titulo">
+        <div class="wrap grid items-center gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(16rem,0.85fr)]">
+          <div>
+            <p class="text-sm font-semibold tracking-wide text-[var(--amber-ink)]">St. Gallen</p>
+            <h1 id="hero-titulo" class="mt-3 text-[2rem] font-bold leading-[1.12] text-[var(--navy)] sm:text-5xl">
+              Tus facturas, ordenadas solas.
+              <span class="mt-1 block">Sin cajas de zapatos.</span>
+            </h1>
+            <p class="mt-5 max-w-xl text-lg text-[var(--muted)]">
+              Para bares, restaurantes, oficios y empresas de limpieza en St. Gallen. Haces una foto al ticket y nosotros nos encargamos de que llegue ordenado a tu gestor.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a class="btn btn-primary w-full sm:w-auto" href="#contacto">Quiero una revisión gratis</a>
+              <!--
+                PLACEHOLDER WhatsApp.
+                Único sitio del número: cambia solo esta URL (internacional, sin + ni espacios).
+              -->
+              <a id="whatsapp" class="btn btn-secondary w-full sm:w-auto" href="https://wa.me/41000000000" target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 17.5 4.5 20V6.5A2.5 2.5 0 0 1 7 4h10a2.5 2.5 0 0 1 2.5 2.5v8A2.5 2.5 0 0 1 17 17H8.2L7 17.5Z"></path>
+                </svg>
+                Escríbeme por WhatsApp
+                <span class="sr-only">(se abre en una pestaña nueva)</span>
+              </a>
+            </div>
+          </div>
+          <aside class="relative mx-auto w-full max-w-sm" aria-label="Ejemplo ilustrativo, no es un ticket real">
+            <div class="absolute bottom-0 left-3 right-0 top-3 rounded-2xl border border-[#d7c6b0] bg-[#e6d5c0]" aria-hidden="true"></div>
+            <div class="sheet relative z-10 mb-3 mr-3">
+              <p class="text-xs font-bold uppercase tracking-[0.14em] text-[var(--amber-ink)]">Ejemplo</p>
+              <p class="mt-1 text-sm text-[var(--muted)]">Así queda archivado. No es un ticket real.</p>
+              <dl class="mt-5 space-y-3 text-sm">
+                <div class="flex items-baseline justify-between gap-4 border-b border-[var(--line)] pb-3">
+                  <dt class="text-[var(--muted)]">Fecha</dt>
+                  <dd class="font-semibold text-[var(--navy)]">12.03</dd>
+                </div>
+                <div class="flex items-baseline justify-between gap-4 border-b border-[var(--line)] pb-3">
+                  <dt class="text-[var(--muted)]">Proveedor</dt>
+                  <dd class="font-semibold text-[var(--navy)]">Proveedor ejemplo</dd>
+                </div>
+                <div class="flex items-baseline justify-between gap-4">
+                  <dt class="text-[var(--muted)]">Importe</dt>
+                  <dd class="font-semibold text-[var(--navy)]">CHF 48.20</dd>
+                </div>
+              </dl>
+              <p class="mt-5 text-sm font-semibold text-[var(--navy)]">Excel · bexio · gestor</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="problema" class="pb-16 sm:pb-24" aria-labelledby="problema-titulo">
+        <div class="wrap">
+          <h2 id="problema-titulo" class="text-2xl font-bold text-[var(--navy)] sm:text-3xl">El problema</h2>
+          <ul class="mt-8 grid gap-4 md:grid-cols-3">
+            <li class="card text-lg font-medium leading-snug text-[var(--navy)]">Horas perdidas a final de mes ordenando tickets.</li>
+            <li class="card text-lg font-medium leading-snug text-[var(--navy)]">Facturas que se pierden y el gestor que te las reclama.</li>
+            <li class="card text-lg font-medium leading-snug text-[var(--navy)]">Te cobran más porque tu contabilidad llega desordenada.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="como-funciona" class="bg-[var(--paper)] py-16 sm:py-24" aria-labelledby="como-titulo">
+        <div class="wrap">
+          <h2 id="como-titulo" class="text-2xl font-bold text-[var(--navy)] sm:text-3xl">Cómo funciona</h2>
+          <ol class="mt-8 grid gap-8 md:grid-cols-3">
+            <li>
+              <span class="step-num" aria-hidden="true">1</span>
+              <p class="mt-3 text-lg font-medium leading-snug text-[var(--navy)]">Foto o email: mandas el ticket como siempre.</p>
+            </li>
+            <li>
+              <span class="step-num" aria-hidden="true">2</span>
+              <p class="mt-3 text-lg font-medium leading-snug text-[var(--navy)]">Se lee solo: fecha, proveedor e importe.</p>
+            </li>
+            <li>
+              <span class="step-num" aria-hidden="true">3</span>
+              <p class="mt-3 text-lg font-medium leading-snug text-[var(--navy)]">Llega ordenado a tu Excel, bexio o a tu gestor.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="incluye" class="py-16 sm:py-24" aria-labelledby="incluye-titulo">
+        <div class="wrap">
+          <h2 id="incluye-titulo" class="text-2xl font-bold text-[var(--navy)] sm:text-3xl">Qué incluye</h2>
+          <ul class="mt-8 grid gap-4 sm:grid-cols-2">
+            <li class="flex gap-3 rounded-2xl border border-[var(--line)] bg-[var(--paper)] p-4 text-[var(--navy)]">
+              <span class="check" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.5 8 14l7.5-8"></path></svg>
+              </span>
+              <span>Puesta en marcha adaptada a cómo ya trabajas</span>
+            </li>
+            <li class="flex gap-3 rounded-2xl border border-[var(--line)] bg-[var(--paper)] p-4 text-[var(--navy)]">
+              <span class="check" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.5 8 14l7.5-8"></path></svg>
+              </span>
+              <span>Resumen mensual listo para tu gestor</span>
+            </li>
+            <li class="flex gap-3 rounded-2xl border border-[var(--line)] bg-[var(--paper)] p-4 text-[var(--navy)]">
+              <span class="check" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.5 8 14l7.5-8"></path></svg>
+              </span>
+              <span>Soporte en español, italiano o portugués</span>
+            </li>
+            <li class="flex gap-3 rounded-2xl border border-[var(--line)] bg-[var(--paper)] p-4 text-[var(--navy)]">
+              <span class="check" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.5 8 14l7.5-8"></path></svg>
+              </span>
+              <span>Pequeños cambios incluidos cada mes</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="precio" class="pb-16 sm:pb-24" aria-labelledby="precio-titulo">
+        <div class="wrap">
+          <article class="price-card mx-auto max-w-2xl">
+            <h2 id="precio-titulo" class="text-2xl font-bold leading-snug sm:text-3xl">Plan piloto: CHF 490 de puesta en marcha + CHF 149/mes.</h2>
+            <p class="mt-4 text-lg">Plazas limitadas para los primeros negocios de St. Gallen. Sin permanencia larga.</p>
+            <a class="btn btn-primary mt-8 w-full sm:w-auto" href="#contacto">Quiero una revisión gratis</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="sobre-mi" class="bg-[var(--paper)] py-16 sm:py-24" aria-labelledby="sobre-titulo">
+        <div class="wrap grid items-center gap-6 sm:grid-cols-[auto_minmax(0,1fr)] sm:gap-10">
+          <div class="avatar" aria-hidden="true">G</div>
+          <div>
+            <h2 id="sobre-titulo" class="text-2xl font-bold text-[var(--navy)] sm:text-3xl">Sobre mí</h2>
+            <p class="mt-4 max-w-xl text-lg text-[var(--ink)]">Soy Gerard, vivo en St. Gallen. Sé lo que es trabajar muchas horas, por eso monto sistemas que te devuelven tiempo.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="preguntas" class="py-16 sm:py-24" aria-labelledby="preguntas-titulo">
+        <div class="wrap max-w-3xl">
+          <h2 id="preguntas-titulo" class="text-2xl font-bold text-[var(--navy)] sm:text-3xl">Preguntas frecuentes</h2>
+          <div class="mt-6 border-y border-[var(--line)]">
+            <h3 class="m-0">
+              <button type="button" class="faq-trigger" id="faq-gestor-btn" aria-expanded="false" aria-controls="faq-gestor">
+                ¿Tengo que cambiar de gestor?
+                <svg class="chevron" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5 10 12.5 15 7.5"></path></svg>
+              </button>
+            </h3>
+            <div id="faq-gestor" class="faq-panel" role="region" aria-labelledby="faq-gestor-btn" hidden>
+              <p>No. Trabajamos con el tuyo.</p>
+            </div>
+            <h3 class="m-0 border-t border-[var(--line)]">
+              <button type="button" class="faq-trigger" id="faq-datos-btn" aria-expanded="false" aria-controls="faq-datos">
+                ¿Mis datos están seguros?
+                <svg class="chevron" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5 10 12.5 15 7.5"></path></svg>
+              </button>
+            </h3>
+            <div id="faq-datos" class="faq-panel" role="region" aria-labelledby="faq-datos-btn" hidden>
+              <p>Se guardan en servicios con servidores en Europa/Suiza y solo tú y tu gestor tenéis acceso.</p>
+            </div>
+            <h3 class="m-0 border-t border-[var(--line)]">
+              <button type="button" class="faq-trigger" id="faq-movil-btn" aria-expanded="false" aria-controls="faq-movil">
+                ¿Y si no uso ordenador?
+                <svg class="chevron" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5 10 12.5 15 7.5"></path></svg>
+              </button>
+            </h3>
+            <div id="faq-movil" class="faq-panel" role="region" aria-labelledby="faq-movil-btn" hidden>
+              <p>Basta con el móvil.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="bg-[var(--paper)] py-16 sm:py-24" aria-labelledby="contacto-titulo">
+        <div class="wrap max-w-2xl">
+          <h2 id="contacto-titulo" tabindex="-1" class="text-2xl font-bold text-[var(--navy)] sm:text-3xl">Pide tu revisión gratis</h2>
+          <p class="mt-3 text-[var(--muted)]">Cuéntame de tu negocio y buscamos un hueco de 15 minutos.</p>
+          <p class="mt-2 text-sm text-[var(--muted)]">Los campos con asterisco son obligatorios.</p>
+          <form id="form-contacto" class="form-contacto mt-8 grid gap-5" action="https://formspree.io/f/xbgozlwo" method="POST" accept-charset="UTF-8">
+            <!-- Honeypot de Formspree: los bots lo rellenan; las personas no lo ven. -->
+            <input class="honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="hidden" name="_subject" value="Nueva solicitud de revisión gratis">
+            <div id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></div>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label class="label" for="nombre">Nombre <span aria-hidden="true">*</span><span class="sr-only"> (obligatorio)</span></label>
+                <input class="field" id="nombre" name="nombre" type="text" autocomplete="name" required>
+              </div>
+              <div>
+                <label class="label" for="negocio">Nombre del negocio <span aria-hidden="true">*</span><span class="sr-only"> (obligatorio)</span></label>
+                <input class="field" id="negocio" name="nombre_del_negocio" type="text" autocomplete="organization" required>
+              </div>
+            </div>
+            <div>
+              <label class="label" for="tipo">Tipo de negocio <span aria-hidden="true">*</span><span class="sr-only"> (obligatorio)</span></label>
+              <select class="field" id="tipo" name="tipo_de_negocio" required>
+                <option value="" selected>Elige una opción</option>
+                <option>Bar / restaurante</option>
+                <option>Oficio (electricista, fontanero, carpintero…)</option>
+                <option>Empresa de limpieza</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label class="label" for="email">Email <span aria-hidden="true">*</span><span class="sr-only"> (obligatorio)</span></label>
+                <input class="field" id="email" name="email" type="email" inputmode="email" autocomplete="email" required>
+              </div>
+              <div>
+                <label class="label" for="telefono">Teléfono / WhatsApp <span class="opt">(opcional)</span></label>
+                <input class="field" id="telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel">
+              </div>
+            </div>
+            <div>
+              <label class="label" for="mensaje">Mensaje <span class="opt">(opcional)</span></label>
+              <textarea class="field" id="mensaje" name="mensaje" rows="5"></textarea>
+            </div>
+            <button class="btn btn-primary w-full sm:w-auto" type="submit">Pedir mi revisión gratis (15 min)</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[var(--navy)] text-[var(--cream)]">
+      <div class="wrap flex flex-col gap-4 py-10 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+        <p class="font-semibold">Facturas en orden · St. Gallen</p>
+        <!-- PLACEHOLDER email: sustituir hola@ejemplo.ch antes de publicar. -->
+        <a class="footer-link" href="mailto:hola@ejemplo.ch">hola@ejemplo.ch</a>
+        <nav class="flex flex-wrap gap-x-5 gap-y-2" aria-label="Legal">
+          <a class="footer-link" href="impressum.html" lang="de">Impressum</a>
+          <a class="footer-link" href="datenschutz.html" lang="de">Datenschutzerklärung</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
