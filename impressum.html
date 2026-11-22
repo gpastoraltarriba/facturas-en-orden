@@ -5,35 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aviso legal (Impressum) — Facturas en orden</title>
     <meta name="description" content="Aviso legal de Facturas en orden. Gerard Pastor Altarriba, Sonnenstrasse 21, 9000 St. Gallen.">
-    <meta name="theme-color" content="#0C2340">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230C2340'/%3E%3Crect x='9' y='6' width='14' height='20' rx='2' fill='%23F4F0E8'/%3E%3Crect x='12' y='11' width='8' height='2' rx='1' fill='%23E2A52E'/%3E%3Crect x='12' y='16' width='8' height='1.6' rx='.8' fill='%230C2340'/%3E%3Crect x='12' y='20' width='5' height='1.6' rx='.8' fill='%230C2340'/%3E%3C/svg%3E" type="image/svg+xml">
+    <meta name="theme-color" content="#102033">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23102033'/%3E%3Crect x='9' y='6' width='14' height='20' rx='2' fill='%23F4F6F8'/%3E%3Crect x='12' y='12' width='8' height='1.6' rx='.8' fill='%236F5433'/%3E%3Crect x='12' y='16' width='8' height='1.6' rx='.8' fill='%23102033'/%3E%3Crect x='12' y='20' width='5' height='1.6' rx='.8' fill='%23102033'/%3E%3C/svg%3E" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Inter", "ui-sans-serif", "system-ui", "Segoe UI", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
   </head>
-  <body class="flex min-h-screen flex-col font-sans antialiased">
+  <body class="flex min-h-screen flex-col font-sans text-ink antialiased">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
-    <header class="sticky top-0 z-40 bg-[var(--navy)] text-[var(--cream)]">
-      <div class="h-1 bg-[var(--amber)]" aria-hidden="true"></div>
-      <div class="wrap flex flex-wrap items-center gap-x-6 gap-y-2 py-3 lg:py-3.5">
-        <a class="mr-auto inline-flex items-center gap-2 text-base font-bold tracking-tight text-[var(--cream)] no-underline" href="index.html">
-          <span class="mark" aria-hidden="true"></span>
+    <header class="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur">
+      <div class="page flex h-16 items-center gap-6">
+        <a class="mr-auto inline-flex items-center gap-2 text-[0.95rem] font-semibold tracking-heading text-navy no-underline" href="index.html">
+          <span class="h-2 w-2 rounded-sm bg-accent" aria-hidden="true"></span>
           Facturas en orden
         </a>
-        <nav class="order-3 flex w-full flex-wrap gap-x-4 gap-y-1 text-sm lg:order-none lg:w-auto" aria-label="Secciones">
+        <nav class="hidden items-center gap-6 lg:flex" aria-label="Secciones">
           <a class="nav-link" href="index.html#como-funciona">Cómo funciona</a>
           <a class="nav-link" href="index.html#incluye">Qué incluye</a>
           <a class="nav-link" href="index.html#precio">Precio</a>
@@ -50,8 +37,8 @@
     </header>
 
     <main id="contenido" class="flex-1">
-      <article class="legal wrap max-w-3xl py-16 sm:py-24">
-        <h1 class="text-3xl font-bold leading-tight text-[var(--navy)] sm:text-4xl">Aviso legal (Impressum)</h1>
+      <article class="legal mx-auto w-[min(42rem,calc(100%-2.5rem))] py-16 sm:py-24">
+        <h1 class="text-3xl font-semibold leading-tight tracking-heading text-navy sm:text-4xl">Aviso legal (Impressum)</h1>
         <p class="mt-8">
           <strong>Facturas en orden</strong><br>
           Gerard Pastor Altarriba<br>
@@ -71,11 +58,11 @@
       </article>
     </main>
 
-    <footer class="bg-[var(--navy)] text-[var(--cream)]">
-      <div class="wrap flex flex-col gap-4 py-10 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
-        <p class="font-semibold">Facturas en orden · St. Gallen</p>
-        <a class="footer-link" href="mailto:gerard@glowishly.shop">gerard@glowishly.shop</a>
-        <nav class="flex flex-wrap gap-x-5 gap-y-2" aria-label="Legal">
+    <footer class="bg-navy text-white">
+      <div class="page flex flex-col gap-4 py-12 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+        <p class="text-sm font-medium text-[#E7EBF0]">Facturas en orden · St. Gallen</p>
+        <a class="footer-link text-sm" href="mailto:gerard@glowishly.shop">gerard@glowishly.shop</a>
+        <nav class="flex flex-wrap gap-x-5 gap-y-2 text-sm" aria-label="Legal">
           <a class="footer-link" href="impressum.html" lang="de" aria-current="page">Impressum</a>
           <a class="footer-link" href="datenschutz.html" lang="de">Datenschutzerklärung</a>
         </nav>

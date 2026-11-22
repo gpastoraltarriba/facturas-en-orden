@@ -1,6 +1,6 @@
 # Facturas en orden
 
-Página de aterrizaje, de una sola vista, para el servicio de ordenar facturas y tickets de negocios pequeños en St. Gallen. El idioma es español de España, con trato de tú. Es HTML, Tailwind por CDN y un poco de JavaScript: no hay framework ni paso de compilación.
+Página de aterrizaje, de una sola vista, para el servicio de ordenar facturas y tickets de negocios pequeños en St. Gallen. El idioma es español de España, con trato de tú. Es HTML y un poco de JavaScript. El CSS de Tailwind va ya compilado: no hace falta el CDN ni un servidor para verla.
 
 ## Archivos
 
@@ -9,15 +9,29 @@ Página de aterrizaje, de una sola vista, para el servicio de ordenar facturas y
 | `index.html` | Página principal: problema, cómo funciona, qué incluye, precio, sobre mí, preguntas y formulario. |
 | `impressum.html` | Aviso legal (Impressum). |
 | `datenschutz.html` | Política de privacidad (Datenschutzerklärung). |
-| `styles.css` | Color, foco visible, botones, tooltip del idioma y el acordeón. |
+| `assets/styles.css` | CSS ya compilado (Tailwind + estilos propios). Es el que cargan las páginas. |
+| `src/input.css` | Fuente de esos estilos, antes de compilar. |
+| `tailwind.config.js` | Configuración de Tailwind (colores, fuente, sombra). |
+| `package.json` | Script para volver a generar el CSS. |
 | `main.js` | Scroll suave, acordeón de las preguntas, aviso «Pronto en alemán» y envío del formulario. |
 | `og-image.png` | Imagen provisional para Open Graph y Twitter. Las etiquetas `og:image` y `twitter:image` apuntan a este archivo. Sustitúyela antes de publicar si quieres otra. |
 
 ## Verla en local
 
-Abre `index.html` en el navegador (doble clic, o arrástrala a una ventana). No hace falta instalar nada ni arrancar un servidor.
+Abre `index.html` en el navegador (doble clic, o arrástrala a una ventana). No hace falta instalar nada ni arrancar un servidor: `assets/styles.css` ya está en el repositorio.
 
-Hace falta internet para la fuente Inter (Google Fonts) y para Tailwind, que se carga desde su CDN. Sin conexión la página se puede leer, pero con menos estilo.
+Hace falta internet solo para la fuente Inter (Google Fonts). Sin conexión se ve igual, con la fuente del sistema.
+
+## Volver a generar el CSS
+
+Si cambias clases en el HTML o `src/input.css`:
+
+```bash
+npm install
+npm run build:css
+```
+
+Eso usa la CLI de Tailwind y escribe `assets/styles.css` minificado. Hay que volver a guardar ese archivo en git. No se usa el CDN de Tailwind.
 
 ## Publicar más adelante en GitHub Pages
 

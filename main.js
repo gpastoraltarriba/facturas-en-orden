@@ -100,6 +100,8 @@
     status.className = "form-status";
     status.textContent = "";
     submit.disabled = true;
+    submit.classList.add("is-loading");
+    submit.setAttribute("aria-busy", "true");
     submit.textContent = "Enviando…";
 
     fetch(form.action, {
@@ -123,6 +125,8 @@
       })
       .finally(function () {
         submit.disabled = false;
+        submit.classList.remove("is-loading");
+        submit.removeAttribute("aria-busy");
         submit.textContent = submitLabel;
       });
   });

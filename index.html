@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Facturas en orden — Tus facturas, ordenadas solas</title>
     <meta name="description" content="Para bares, restaurantes, oficios y empresas de limpieza en St. Gallen. Haces una foto al ticket y nosotros nos encargamos de que llegue ordenado a tu gestor.">
-    <meta name="theme-color" content="#0C2340">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230C2340'/%3E%3Crect x='9' y='6' width='14' height='20' rx='2' fill='%23F4F0E8'/%3E%3Crect x='12' y='11' width='8' height='2' rx='1' fill='%23E2A52E'/%3E%3Crect x='12' y='16' width='8' height='1.6' rx='.8' fill='%230C2340'/%3E%3Crect x='12' y='20' width='5' height='1.6' rx='.8' fill='%230C2340'/%3E%3C/svg%3E" type="image/svg+xml">
+    <meta name="theme-color" content="#102033">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23102033'/%3E%3Crect x='9' y='6' width='14' height='20' rx='2' fill='%23F4F6F8'/%3E%3Crect x='12' y='12' width='8' height='1.6' rx='.8' fill='%236F5433'/%3E%3Crect x='12' y='16' width='8' height='1.6' rx='.8' fill='%23102033'/%3E%3Crect x='12' y='20' width='5' height='1.6' rx='.8' fill='%23102033'/%3E%3C/svg%3E" type="image/svg+xml">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_ES">
     <meta property="og:site_name" content="Facturas en orden">
@@ -24,31 +24,18 @@
     <meta name="twitter:image:alt" content="Facturas en orden. St. Gallen.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Inter", "ui-sans-serif", "system-ui", "Segoe UI", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
   </head>
-  <body class="flex min-h-screen flex-col font-sans antialiased">
+  <body class="flex min-h-screen flex-col font-sans text-ink antialiased">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
-    <header class="sticky top-0 z-40 bg-[var(--navy)] text-[var(--cream)]">
-      <div class="h-1 bg-[var(--amber)]" aria-hidden="true"></div>
-      <div class="wrap flex flex-wrap items-center gap-x-6 gap-y-2 py-3 lg:py-3.5">
-        <a class="mr-auto inline-flex items-center gap-2 text-base font-bold tracking-tight text-[var(--cream)] no-underline" href="#contenido">
-          <span class="mark" aria-hidden="true"></span>
+    <header class="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur">
+      <div class="page flex h-16 items-center gap-6">
+        <a class="mr-auto inline-flex items-center gap-2 text-[0.95rem] font-semibold tracking-heading text-navy no-underline" href="#contenido">
+          <span class="h-2 w-2 rounded-sm bg-accent" aria-hidden="true"></span>
           Facturas en orden
         </a>
-        <nav class="order-3 flex w-full flex-wrap gap-x-4 gap-y-1 text-sm lg:order-none lg:w-auto" aria-label="Secciones">
+        <nav class="hidden items-center gap-6 lg:flex" aria-label="Secciones">
           <a class="nav-link" href="#como-funciona">Cómo funciona</a>
           <a class="nav-link" href="#incluye">Qué incluye</a>
           <a class="nav-link" href="#precio">Precio</a>
@@ -65,15 +52,15 @@
     </header>
 
     <main id="contenido" class="flex-1">
-      <section class="py-14 sm:py-20" aria-labelledby="hero-titulo">
-        <div class="wrap grid items-center gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(16rem,0.85fr)]">
+      <section class="py-16 sm:py-24" aria-labelledby="hero-titulo">
+        <div class="page grid items-center gap-14 lg:grid-cols-[minmax(0,1.15fr)_minmax(18rem,0.85fr)]">
           <div>
-            <p class="text-sm font-semibold tracking-wide text-[var(--amber-ink)]">St. Gallen</p>
-            <h1 id="hero-titulo" class="mt-3 text-[2rem] font-bold leading-[1.12] text-[var(--navy)] sm:text-5xl">
+            <p class="text-sm font-medium tracking-wide text-accent">St. Gallen</p>
+            <h1 id="hero-titulo" class="mt-4 text-[2.125rem] font-semibold leading-[1.08] tracking-heading text-navy sm:text-5xl lg:text-[3.25rem]">
               Tus facturas, ordenadas solas.
-              <span class="mt-1 block">Sin cajas de zapatos.</span>
+              <span class="mt-2 block">Sin cajas de zapatos.</span>
             </h1>
-            <p class="mt-5 max-w-xl text-lg text-[var(--muted)]">
+            <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted">
               Para bares, restaurantes, oficios y empresas de limpieza en St. Gallen. Haces una foto al ticket y nosotros nos encargamos de que llegue ordenado a tu gestor.
             </p>
             <div class="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -83,148 +70,177 @@
                 Número 41772020493 y mensaje prellenado. Cámbialo solo aquí.
               -->
               <a id="whatsapp" class="btn btn-secondary w-full sm:w-auto" href="https://wa.me/41772020493?text=Hola%20Gerard%2C%20me%20interesa%20la%20revisi%C3%B3n%20gratis%20de%20Facturas%20en%20orden" target="_blank" rel="noopener noreferrer">
-                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M7 17.5 4.5 20V6.5A2.5 2.5 0 0 1 7 4h10a2.5 2.5 0 0 1 2.5 2.5v8A2.5 2.5 0 0 1 17 17H8.2L7 17.5Z"></path>
+                <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7.5 18.5 4.5 20.5V6.5A2.5 2.5 0 0 1 7 4h10a2.5 2.5 0 0 1 2.5 2.5v8A2.5 2.5 0 0 1 17 17H8.6L7.5 18.5Z"></path>
                 </svg>
                 Escríbeme por WhatsApp
                 <span class="sr-only">(se abre en una pestaña nueva)</span>
               </a>
             </div>
           </div>
-          <aside class="relative mx-auto w-full max-w-sm" aria-label="Ejemplo ilustrativo, no es un ticket real">
-            <div class="absolute bottom-0 left-3 right-0 top-3 rounded-2xl border border-[#d7c6b0] bg-[#e6d5c0]" aria-hidden="true"></div>
-            <div class="sheet relative z-10 mb-3 mr-3">
-              <p class="text-xs font-bold uppercase tracking-[0.14em] text-[var(--amber-ink)]">Ejemplo</p>
-              <p class="mt-1 text-sm text-[var(--muted)]">Así queda archivado. No es un ticket real.</p>
-              <dl class="mt-5 space-y-3 text-sm">
-                <div class="flex items-baseline justify-between gap-4 border-b border-[var(--line)] pb-3">
-                  <dt class="text-[var(--muted)]">Fecha</dt>
-                  <dd class="font-semibold text-[var(--navy)]">12.03</dd>
-                </div>
-                <div class="flex items-baseline justify-between gap-4 border-b border-[var(--line)] pb-3">
-                  <dt class="text-[var(--muted)]">Proveedor</dt>
-                  <dd class="font-semibold text-[var(--navy)]">Proveedor ejemplo</dd>
-                </div>
-                <div class="flex items-baseline justify-between gap-4">
-                  <dt class="text-[var(--muted)]">Importe</dt>
-                  <dd class="font-semibold text-[var(--navy)]">CHF 48.20</dd>
-                </div>
-              </dl>
-              <p class="mt-5 text-sm font-semibold text-[var(--navy)]">Excel · bexio · gestor</p>
-            </div>
+          <aside class="card mx-auto w-full max-w-sm p-6" aria-label="Ejemplo ilustrativo, no es un ticket real">
+            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-accent">Ejemplo</p>
+            <p class="mt-1 text-sm text-muted">Así queda archivado. No es un ticket real.</p>
+            <dl class="mt-6 space-y-3 text-sm">
+              <div class="flex items-baseline justify-between gap-4 border-b border-line pb-3">
+                <dt class="text-muted">Fecha</dt>
+                <dd class="font-medium text-navy">12.03</dd>
+              </div>
+              <div class="flex items-baseline justify-between gap-4 border-b border-line pb-3">
+                <dt class="text-muted">Proveedor</dt>
+                <dd class="font-medium text-navy">Proveedor ejemplo</dd>
+              </div>
+              <div class="flex items-baseline justify-between gap-4">
+                <dt class="text-muted">Importe</dt>
+                <dd class="font-medium text-navy">CHF 48.20</dd>
+              </div>
+            </dl>
+            <p class="mt-6 text-sm font-medium text-navy">Excel · bexio · gestor</p>
           </aside>
         </div>
       </section>
 
       <section id="problema" class="pb-16 sm:pb-24" aria-labelledby="problema-titulo">
-        <div class="wrap">
-          <h2 id="problema-titulo" class="text-2xl font-bold text-[var(--navy)] sm:text-3xl">El problema</h2>
-          <ul class="mt-8 grid gap-4 md:grid-cols-3">
-            <li class="card text-lg font-medium leading-snug text-[var(--navy)]">Horas perdidas a final de mes ordenando tickets.</li>
-            <li class="card text-lg font-medium leading-snug text-[var(--navy)]">Facturas que se pierden y el gestor que te las reclama.</li>
-            <li class="card text-lg font-medium leading-snug text-[var(--navy)]">Te cobran más porque tu contabilidad llega desordenada.</li>
+        <div class="page">
+          <h2 id="problema-titulo" class="text-[1.75rem] font-semibold tracking-heading text-navy sm:text-4xl">El problema</h2>
+          <ul class="mt-10 grid gap-4 md:grid-cols-3">
+            <li class="card p-6">
+              <span class="icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+              </span>
+              <p class="mt-5 text-lg font-medium leading-snug text-navy">Horas perdidas a final de mes ordenando tickets.</p>
+            </li>
+            <li class="card p-6">
+              <span class="icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><path d="M14 2v6h6"></path><path d="M12 12v4"></path><path d="M12 18h.01"></path></svg>
+              </span>
+              <p class="mt-5 text-lg font-medium leading-snug text-navy">Facturas que se pierden y el gestor que te las reclama.</p>
+            </li>
+            <li class="card p-6">
+              <span class="icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path></svg>
+              </span>
+              <p class="mt-5 text-lg font-medium leading-snug text-navy">Te cobran más porque tu contabilidad llega desordenada.</p>
+            </li>
           </ul>
         </div>
       </section>
 
-      <section id="como-funciona" class="bg-[var(--paper)] py-16 sm:py-24" aria-labelledby="como-titulo">
-        <div class="wrap">
-          <h2 id="como-titulo" class="text-2xl font-bold text-[var(--navy)] sm:text-3xl">Cómo funciona</h2>
-          <ol class="mt-8 grid gap-8 md:grid-cols-3">
-            <li>
-              <span class="step-num" aria-hidden="true">1</span>
-              <p class="mt-3 text-lg font-medium leading-snug text-[var(--navy)]">Foto o email: mandas el ticket como siempre.</p>
+      <section id="como-funciona" class="pb-16 sm:pb-24" aria-labelledby="como-titulo">
+        <div class="page">
+          <h2 id="como-titulo" class="text-[1.75rem] font-semibold tracking-heading text-navy sm:text-4xl">Cómo funciona</h2>
+          <ol class="mt-10 grid gap-4 md:grid-cols-3">
+            <li class="card p-6">
+              <div class="flex items-center justify-between">
+                <span class="icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L8 6H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-3l-1.5-2z"></path><circle cx="12" cy="13" r="3"></circle></svg>
+                </span>
+                <span class="step-index" aria-hidden="true">01</span>
+              </div>
+              <p class="mt-5 text-lg font-medium leading-snug text-navy">Foto o email: mandas el ticket como siempre.</p>
             </li>
-            <li>
-              <span class="step-num" aria-hidden="true">2</span>
-              <p class="mt-3 text-lg font-medium leading-snug text-[var(--navy)]">Se lee solo: fecha, proveedor e importe.</p>
+            <li class="card p-6">
+              <div class="flex items-center justify-between">
+                <span class="icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"></path><path d="M17 3h2a2 2 0 0 1 2 2v2"></path><path d="M21 17v2a2 2 0 0 1-2 2h-2"></path><path d="M7 21H5a2 2 0 0 1-2-2v-2"></path><path d="M7 12h10"></path></svg>
+                </span>
+                <span class="step-index" aria-hidden="true">02</span>
+              </div>
+              <p class="mt-5 text-lg font-medium leading-snug text-navy">Se lee solo: fecha, proveedor e importe.</p>
             </li>
-            <li>
-              <span class="step-num" aria-hidden="true">3</span>
-              <p class="mt-3 text-lg font-medium leading-snug text-[var(--navy)]">Llega ordenado a tu Excel, bexio o a tu gestor.</p>
+            <li class="card p-6">
+              <div class="flex items-center justify-between">
+                <span class="icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z"></path><path d="m9 13 2 2 4-4"></path></svg>
+                </span>
+                <span class="step-index" aria-hidden="true">03</span>
+              </div>
+              <p class="mt-5 text-lg font-medium leading-snug text-navy">Llega ordenado a tu Excel, bexio o a tu gestor.</p>
             </li>
           </ol>
         </div>
       </section>
 
-      <section id="incluye" class="py-16 sm:py-24" aria-labelledby="incluye-titulo">
-        <div class="wrap">
-          <h2 id="incluye-titulo" class="text-2xl font-bold text-[var(--navy)] sm:text-3xl">Qué incluye</h2>
-          <ul class="mt-8 grid gap-4 sm:grid-cols-2">
-            <li class="flex gap-3 rounded-2xl border border-[var(--line)] bg-[var(--paper)] p-4 text-[var(--navy)]">
-              <span class="check" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.5 8 14l7.5-8"></path></svg>
+      <section id="incluye" class="pb-16 sm:pb-24" aria-labelledby="incluye-titulo">
+        <div class="page">
+          <h2 id="incluye-titulo" class="text-[1.75rem] font-semibold tracking-heading text-navy sm:text-4xl">Qué incluye</h2>
+          <ul class="mt-10 grid gap-4 sm:grid-cols-2">
+            <li class="card flex items-start gap-4 p-5 text-navy">
+              <span class="icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
               </span>
-              <span>Puesta en marcha adaptada a cómo ya trabajas</span>
+              <span class="pt-1.5">Puesta en marcha adaptada a cómo ya trabajas</span>
             </li>
-            <li class="flex gap-3 rounded-2xl border border-[var(--line)] bg-[var(--paper)] p-4 text-[var(--navy)]">
-              <span class="check" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.5 8 14l7.5-8"></path></svg>
+            <li class="card flex items-start gap-4 p-5 text-navy">
+              <span class="icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
               </span>
-              <span>Resumen mensual listo para tu gestor</span>
+              <span class="pt-1.5">Resumen mensual listo para tu gestor</span>
             </li>
-            <li class="flex gap-3 rounded-2xl border border-[var(--line)] bg-[var(--paper)] p-4 text-[var(--navy)]">
-              <span class="check" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.5 8 14l7.5-8"></path></svg>
+            <li class="card flex items-start gap-4 p-5 text-navy">
+              <span class="icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
               </span>
-              <span>Soporte en español, italiano o portugués</span>
+              <span class="pt-1.5">Soporte en español, italiano o portugués</span>
             </li>
-            <li class="flex gap-3 rounded-2xl border border-[var(--line)] bg-[var(--paper)] p-4 text-[var(--navy)]">
-              <span class="check" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 10.5 8 14l7.5-8"></path></svg>
+            <li class="card flex items-start gap-4 p-5 text-navy">
+              <span class="icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
               </span>
-              <span>Pequeños cambios incluidos cada mes</span>
+              <span class="pt-1.5">Pequeños cambios incluidos cada mes</span>
             </li>
           </ul>
         </div>
       </section>
 
       <section id="precio" class="pb-16 sm:pb-24" aria-labelledby="precio-titulo">
-        <div class="wrap">
-          <article class="price-card mx-auto max-w-2xl">
-            <h2 id="precio-titulo" class="text-2xl font-bold leading-snug sm:text-3xl">Plan piloto: CHF 490 de puesta en marcha + CHF 149/mes.</h2>
-            <p class="mt-4 text-lg">Plazas limitadas para los primeros negocios de St. Gallen. Sin permanencia larga.</p>
-            <a class="btn btn-primary mt-8 w-full sm:w-auto" href="#contacto">Quiero una revisión gratis</a>
+        <div class="page">
+          <article class="card mx-auto max-w-3xl p-8 sm:p-10">
+            <h2 id="precio-titulo" class="text-[1.75rem] font-semibold leading-snug tracking-heading text-navy sm:text-4xl">Plan piloto: CHF 490 de puesta en marcha + CHF 149/mes.</h2>
+            <p class="mt-4 max-w-2xl text-lg text-muted">Plazas limitadas para los primeros negocios de St. Gallen. Sin permanencia larga.</p>
+            <a class="btn btn-primary mt-8" href="#contacto">Quiero una revisión gratis</a>
           </article>
         </div>
       </section>
 
-      <section id="sobre-mi" class="bg-[var(--paper)] py-16 sm:py-24" aria-labelledby="sobre-titulo">
-        <div class="wrap grid items-center gap-6 sm:grid-cols-[auto_minmax(0,1fr)] sm:gap-10">
-          <div class="avatar" aria-hidden="true">G</div>
-          <div>
-            <h2 id="sobre-titulo" class="text-2xl font-bold text-[var(--navy)] sm:text-3xl">Sobre mí</h2>
-            <p class="mt-4 max-w-xl text-lg text-[var(--ink)]">Soy Gerard, vivo en St. Gallen. Sé lo que es trabajar muchas horas, por eso monto sistemas que te devuelven tiempo.</p>
+      <section id="sobre-mi" class="pb-16 sm:pb-24" aria-labelledby="sobre-titulo">
+        <div class="page">
+          <div class="card grid items-center gap-6 p-8 sm:grid-cols-[auto_minmax(0,1fr)] sm:gap-8 sm:p-10">
+            <div class="avatar" aria-hidden="true">G</div>
+            <div>
+              <h2 id="sobre-titulo" class="text-[1.75rem] font-semibold tracking-heading text-navy sm:text-4xl">Sobre mí</h2>
+              <p class="mt-4 max-w-xl text-lg text-ink">Soy Gerard, vivo en St. Gallen. Sé lo que es trabajar muchas horas, por eso monto sistemas que te devuelven tiempo.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="preguntas" class="py-16 sm:py-24" aria-labelledby="preguntas-titulo">
-        <div class="wrap max-w-3xl">
-          <h2 id="preguntas-titulo" class="text-2xl font-bold text-[var(--navy)] sm:text-3xl">Preguntas frecuentes</h2>
-          <div class="mt-6 border-y border-[var(--line)]">
+      <section id="preguntas" class="pb-16 sm:pb-24" aria-labelledby="preguntas-titulo">
+        <div class="page max-w-3xl">
+          <h2 id="preguntas-titulo" class="text-[1.75rem] font-semibold tracking-heading text-navy sm:text-4xl">Preguntas frecuentes</h2>
+          <div class="card mt-10 px-6 sm:px-8">
             <h3 class="m-0">
               <button type="button" class="faq-trigger" id="faq-gestor-btn" aria-expanded="false" aria-controls="faq-gestor">
                 ¿Tengo que cambiar de gestor?
-                <svg class="chevron" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5 10 12.5 15 7.5"></path></svg>
+                <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
               </button>
             </h3>
             <div id="faq-gestor" class="faq-panel" role="region" aria-labelledby="faq-gestor-btn" hidden>
               <p>No. Trabajamos con el tuyo.</p>
             </div>
-            <h3 class="m-0 border-t border-[var(--line)]">
+            <h3 class="m-0 border-t border-line">
               <button type="button" class="faq-trigger" id="faq-datos-btn" aria-expanded="false" aria-controls="faq-datos">
                 ¿Mis datos están seguros?
-                <svg class="chevron" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5 10 12.5 15 7.5"></path></svg>
+                <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
               </button>
             </h3>
             <div id="faq-datos" class="faq-panel" role="region" aria-labelledby="faq-datos-btn" hidden>
               <p>Se guardan en servicios con servidores en Europa/Suiza y solo tú y tu gestor tenéis acceso.</p>
             </div>
-            <h3 class="m-0 border-t border-[var(--line)]">
+            <h3 class="m-0 border-t border-line">
               <button type="button" class="faq-trigger" id="faq-movil-btn" aria-expanded="false" aria-controls="faq-movil">
                 ¿Y si no uso ordenador?
-                <svg class="chevron" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7.5 10 12.5 15 7.5"></path></svg>
+                <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
               </button>
             </h3>
             <div id="faq-movil" class="faq-panel" role="region" aria-labelledby="faq-movil-btn" hidden>
@@ -234,28 +250,33 @@
         </div>
       </section>
 
-      <section id="contacto" class="bg-[var(--paper)] py-16 sm:py-24" aria-labelledby="contacto-titulo">
-        <div class="wrap max-w-2xl">
-          <h2 id="contacto-titulo" tabindex="-1" class="text-2xl font-bold text-[var(--navy)] sm:text-3xl">Pide tu revisión gratis</h2>
-          <p class="mt-3 text-[var(--muted)]">Cuéntame de tu negocio y buscamos un hueco de 15 minutos.</p>
-          <p class="mt-2 text-sm text-[var(--muted)]">Los campos con asterisco son obligatorios.</p>
-          <form id="form-contacto" class="form-contacto mt-8 grid gap-5" action="https://formspree.io/f/xbgozlwo" method="POST" accept-charset="UTF-8">
+      <section id="contacto" class="pb-20 sm:pb-28" aria-labelledby="contacto-titulo">
+        <div class="page grid items-start gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
+          <div>
+            <h2 id="contacto-titulo" tabindex="-1" class="text-[1.75rem] font-semibold tracking-heading text-navy sm:text-4xl">Pide tu revisión gratis</h2>
+            <p class="mt-4 text-lg text-muted">Cuéntame de tu negocio y buscamos un hueco de 15 minutos.</p>
+            <p class="mt-3 text-sm text-muted">Los campos con asterisco son obligatorios.</p>
+            <aside class="card mt-8 p-5">
+              <p class="text-sm font-semibold text-navy">15 minutos. Sin compromiso.</p>
+            </aside>
+          </div>
+          <form id="form-contacto" class="card grid gap-5 p-6 sm:p-8" action="https://formspree.io/f/xbgozlwo" method="POST" accept-charset="UTF-8">
             <!-- Honeypot de Formspree: los bots lo rellenan; las personas no lo ven. -->
             <input class="honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
             <input type="hidden" name="_subject" value="Nueva solicitud de revisión gratis">
             <div id="form-status" class="form-status" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></div>
             <div class="grid gap-5 sm:grid-cols-2">
               <div>
-                <label class="label" for="nombre">Nombre <span aria-hidden="true">*</span><span class="sr-only"> (obligatorio)</span></label>
+                <label class="label" for="nombre">Nombre <span class="req" aria-hidden="true">*</span><span class="sr-only"> (obligatorio)</span></label>
                 <input class="field" id="nombre" name="nombre" type="text" autocomplete="name" required>
               </div>
               <div>
-                <label class="label" for="negocio">Nombre del negocio <span aria-hidden="true">*</span><span class="sr-only"> (obligatorio)</span></label>
+                <label class="label" for="negocio">Nombre del negocio <span class="req" aria-hidden="true">*</span><span class="sr-only"> (obligatorio)</span></label>
                 <input class="field" id="negocio" name="nombre_del_negocio" type="text" autocomplete="organization" required>
               </div>
             </div>
             <div>
-              <label class="label" for="tipo">Tipo de negocio <span aria-hidden="true">*</span><span class="sr-only"> (obligatorio)</span></label>
+              <label class="label" for="tipo">Tipo de negocio <span class="req" aria-hidden="true">*</span><span class="sr-only"> (obligatorio)</span></label>
               <select class="field" id="tipo" name="tipo_de_negocio" required>
                 <option value="" selected>Elige una opción</option>
                 <option>Bar / restaurante</option>
@@ -266,7 +287,7 @@
             </div>
             <div class="grid gap-5 sm:grid-cols-2">
               <div>
-                <label class="label" for="email">Email <span aria-hidden="true">*</span><span class="sr-only"> (obligatorio)</span></label>
+                <label class="label" for="email">Email <span class="req" aria-hidden="true">*</span><span class="sr-only"> (obligatorio)</span></label>
                 <input class="field" id="email" name="email" type="email" inputmode="email" autocomplete="email" required>
               </div>
               <div>
@@ -278,17 +299,17 @@
               <label class="label" for="mensaje">Mensaje <span class="opt">(opcional)</span></label>
               <textarea class="field" id="mensaje" name="mensaje" rows="5"></textarea>
             </div>
-            <button class="btn btn-primary w-full sm:w-auto" type="submit">Pedir mi revisión gratis (15 min)</button>
+            <button class="btn btn-primary w-full" type="submit">Pedir mi revisión gratis (15 min)</button>
           </form>
         </div>
       </section>
     </main>
 
-    <footer class="bg-[var(--navy)] text-[var(--cream)]">
-      <div class="wrap flex flex-col gap-4 py-10 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
-        <p class="font-semibold">Facturas en orden · St. Gallen</p>
-        <a class="footer-link" href="mailto:gerard@glowishly.shop">gerard@glowishly.shop</a>
-        <nav class="flex flex-wrap gap-x-5 gap-y-2" aria-label="Legal">
+    <footer class="bg-navy text-white">
+      <div class="page flex flex-col gap-4 py-12 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+        <p class="text-sm font-medium text-[#E7EBF0]">Facturas en orden · St. Gallen</p>
+        <a class="footer-link text-sm" href="mailto:gerard@glowishly.shop">gerard@glowishly.shop</a>
+        <nav class="flex flex-wrap gap-x-5 gap-y-2 text-sm" aria-label="Legal">
           <a class="footer-link" href="impressum.html" lang="de">Impressum</a>
           <a class="footer-link" href="datenschutz.html" lang="de">Datenschutzerklärung</a>
         </nav>
