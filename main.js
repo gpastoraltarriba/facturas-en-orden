@@ -1,5 +1,5 @@
 /* Facturas en orden — JS mínimo: scroll, idioma (placeholder), FAQ y formulario.
-   El número de WhatsApp está solo en index.html, enlace #whatsapp (PLACEHOLDER). */
+   El enlace de WhatsApp está solo en index.html, en #whatsapp (WHATSAPP_URL). */
 (function () {
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
