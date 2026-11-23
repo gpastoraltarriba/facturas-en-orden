@@ -1,5 +1,7 @@
-/* Facturas en orden — JS mínimo: scroll, idioma (placeholder), FAQ y formulario.
-   El enlace de WhatsApp está solo en index.html, en #whatsapp (WHATSAPP_URL). */
+/* Facturas en orden — JS mínimo: scroll, FAQ y formulario.
+   El aviso «Pronto en alemán» sigue en impressum.html y datenschutz.html (.lang-de).
+   El enlace de WhatsApp está en el href de #whatsapp (index.html y pt.html).
+   Los textos del formulario salen en español o en portugués según <html lang>. */
 (function () {
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -63,17 +65,39 @@
   var status = document.getElementById("form-status");
   var submit = form.querySelector('[type="submit"]');
   var submitLabel = submit ? submit.textContent : "";
+  var pt = (document.documentElement.lang || "").toLowerCase().indexOf("pt") === 0;
+  var copy = pt
+    ? {
+        valueMissing: "Preencha este campo.",
+        typeMismatch: "Escreva um e-mail válido.",
+        bad: "Verifique este campo.",
+        sending: "A enviar…",
+        success:
+          "Pronto. Recebi a sua mensagem. Escrevo-lhe para combinarmos a revisão de 15 minutos.",
+        error:
+          "Não foi possível enviar. Verifique a ligação e tente de novo, ou escreva-me por WhatsApp.",
+      }
+    : {
+        valueMissing: "Rellena este campo.",
+        typeMismatch: "Escribe un email válido.",
+        bad: "Revisa este campo.",
+        sending: "Enviando…",
+        success:
+          "Listo. He recibido tu mensaje. Te escribo para concretar la revisión de 15 minutos.",
+        error:
+          "No se ha podido enviar. Revisa tu conexión e inténtalo de nuevo, o escríbeme por WhatsApp.",
+      };
 
   form.querySelectorAll("input, select, textarea").forEach(function (field) {
     if (field.name === "_gotcha" || field.type === "hidden") return;
 
     field.addEventListener("invalid", function () {
       if (field.validity.valueMissing) {
-        field.setCustomValidity("Rellena este campo.");
+        field.setCustomValidity(copy.valueMissing);
       } else if (field.validity.typeMismatch) {
-        field.setCustomValidity("Escribe un email válido.");
+        field.setCustomValidity(copy.typeMismatch);
       } else {
-        field.setCustomValidity("Revisa este campo.");
+        field.setCustomValidity(copy.bad);
       }
     });
 
@@ -102,7 +126,7 @@
     submit.disabled = true;
     submit.classList.add("is-loading");
     submit.setAttribute("aria-busy", "true");
-    submit.textContent = "Enviando…";
+    submit.textContent = copy.sending;
 
     fetch(form.action, {
       method: "POST",
@@ -112,16 +136,10 @@
       .then(function (response) {
         if (!response.ok) throw new Error("request failed");
         form.reset();
-        showStatus(
-          "Listo. He recibido tu mensaje. Te escribo para concretar la revisión de 15 minutos.",
-          "success"
-        );
+        showStatus(copy.success, "success");
       })
       .catch(function () {
-        showStatus(
-          "No se ha podido enviar. Revisa tu conexión e inténtalo de nuevo, o escríbeme por WhatsApp.",
-          "error"
-        );
+        showStatus(copy.error, "error");
       })
       .finally(function () {
         submit.disabled = false;
