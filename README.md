@@ -46,7 +46,7 @@ No hay ningún alojamiento activado: ni GitHub Pages, ni Netlify, ni Vercel. Cua
 
 ## Contacto y qué queda provisional
 
-- **Email.** `gerard@glowishly.shop`, en el pie de las tres páginas y en los textos legales.
+- **Email.** `g.pastor.altarriba@gmail.com`, en el pie de las tres páginas y en los textos legales.
 - **WhatsApp.** El botón abre `https://wa.me/41772020493` con el mensaje «Hola Gerard, me interesa la revisión gratis de Facturas en orden». El enlace está una sola vez: el `href` de `#whatsapp` en `index.html` (comentario `WHATSAPP_URL`).
 - **Imagen para redes.** `og-image.png` es un gráfico provisional (marino y ámbar), no una foto. La foto de «Sobre mí» también es un recuadro con la inicial.
 - **Alemán.** El botón DE no cambia el idioma. Muestra «Pronto en alemán».
