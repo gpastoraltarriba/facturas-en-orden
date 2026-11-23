@@ -16,18 +16,16 @@
     <meta property="og:title" content="Facturas en orden — Tus facturas, ordenadas solas">
     <meta property="og:description" content="Para bares, restaurantes, oficios y empresas de limpieza en St. Gallen. Haces una foto al ticket y nosotros nos encargamos de que llegue ordenado a tu gestor.">
     <!-- Placeholder: sustituir og-image.png si quieres otra imagen antes de publicar. -->
-    <meta property="og:image" content="og-image.png">
+    <meta property="og:image" content="https://gpastoraltarriba.github.io/facturas-en-orden/og-image.png">
     <meta property="og:image:alt" content="Facturas en orden. St. Gallen.">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Facturas en orden — Tus facturas, ordenadas solas">
     <meta name="twitter:description" content="Para bares, restaurantes, oficios y empresas de limpieza en St. Gallen. Haces una foto al ticket y nosotros nos encargamos de que llegue ordenado a tu gestor.">
-    <meta name="twitter:image" content="og-image.png">
+    <meta name="twitter:image" content="https://gpastoraltarriba.github.io/facturas-en-orden/og-image.png">
     <meta name="twitter:image:alt" content="Facturas en orden. St. Gallen.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/styles.css">
   </head>
   <body class="flex min-h-screen flex-col font-sans text-ink antialiased">
@@ -238,7 +236,7 @@
               </button>
             </h3>
             <div id="faq-datos" class="faq-panel" role="region" aria-labelledby="faq-datos-btn" hidden>
-              <p>Se guardan en servicios con servidores en Europa/Suiza y solo tú y tu gestor tenéis acceso.</p>
+              <p>Tus facturas se guardan en una cuenta de Google solo para tu negocio (Gmail, Drive y Hojas de cálculo). Las lee Gemini, la IA de Google, con su servicio de pago, que no usa tus datos para mejorar sus productos. Google puede tratarlos también fuera de Suiza. Tienen acceso tú, tu gestor y yo, solo para mantener el sistema. Antes de empezar firmamos un acuerdo de tratamiento de datos. Más detalles en la <a class="text-link" href="datenschutz.html">política de privacidad</a>.</p>
             </div>
             <h3 class="m-0 border-t border-line">
               <button type="button" class="faq-trigger" id="faq-movil-btn" aria-expanded="false" aria-controls="faq-movil">
@@ -312,6 +310,7 @@
               <textarea class="field" id="mensaje" name="mensaje" rows="5"></textarea>
             </div>
             <button class="btn btn-primary w-full" type="submit">Pedir mi revisión gratis (15 min)</button>
+            <p class="text-sm text-muted">Al enviar, tus datos llegan a Formspree (EE. UU.) para que pueda responderte. Más información en la <a class="text-link" href="datenschutz.html">política de privacidad</a>.</p>
           </form>
         </div>
       </section>

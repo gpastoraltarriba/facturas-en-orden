@@ -15,13 +15,14 @@ Página de aterrizaje, de una sola vista, para el servicio de ordenar facturas y
 | `tailwind.config.js` | Configuración de Tailwind (colores, fuente, sombra). |
 | `package.json` | Script para volver a generar el CSS. |
 | `main.js` | Scroll suave, acordeón de las preguntas, aviso «Pronto en alemán» en las páginas legales y envío del formulario (textos en español o portugués según el idioma de la página). |
+| `assets/fonts/` | Fuente Inter (400, 500 y 600) servida desde la propia web, con su licencia OFL. |
 | `og-image.png` | Imagen provisional para Open Graph y Twitter. Las etiquetas `og:image` y `twitter:image` apuntan a este archivo. Sustitúyela antes de publicar si quieres otra. |
 
 ## Verla en local
 
 Abre `index.html` en el navegador (doble clic, o arrástrala a una ventana). No hace falta instalar nada ni arrancar un servidor: `assets/styles.css` ya está en el repositorio.
 
-Hace falta internet solo para la fuente Inter (Google Fonts). Sin conexión se ve igual, con la fuente del sistema.
+No hace falta internet: la fuente Inter está en `assets/fonts/` (licencia OFL, en `assets/fonts/OFL.txt`). La web no carga nada de Google Fonts ni de otros servidores.
 
 ## Volver a generar el CSS
 
@@ -43,7 +44,7 @@ No hay ningún alojamiento activado: ni GitHub Pages, ni Netlify, ni Vercel. Cua
 3. En **Build and deployment**, elige **Deploy from a branch**.
 4. En **Branch**, elige `main` y la carpeta **`/ (root)`**. Guarda.
 5. Espera a que quede publicada en `https://gpastoraltarriba.github.io/facturas-en-orden/`.
-6. Cuando tenga una dirección definitiva, conviene cambiar `og:image` y `twitter:image` a la URL absoluta de `og-image.png`.
+6. `og:image` y `twitter:image` ya apuntan a la URL absoluta de GitHub Pages. Si cambia la dirección (dominio propio), actualízalas en `index.html` y `pt.html`.
 
 ## Contacto y qué queda provisional
 
