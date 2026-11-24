@@ -1,6 +1,6 @@
 # Facturas en orden
 
-Página de aterrizaje, de una sola vista, para el servicio de ordenar facturas y tickets de negocios pequeños en St. Gallen. El idioma principal es español de España, con trato de tú. Hay una traducción al portugués de Portugal en `pt.html` (trato de você). Es HTML y un poco de JavaScript. El CSS de Tailwind va ya compilado: no hace falta el CDN ni un servidor para verla.
+Página de aterrizaje, de una sola vista, para el servicio de ordenar facturas y tickets de negocios pequeños en St. Gallen. El idioma principal es español de España, con trato de tú. Hay traducciones al portugués de Portugal en `pt.html` (trato de você) y al italiano en `it.html` (trato de Lei; «gestor» se dice «fiduciario», como en Suiza). Es HTML y un poco de JavaScript. El CSS de Tailwind va ya compilado: no hace falta el CDN ni un servidor para verla.
 
 ## Archivos
 
@@ -8,20 +8,22 @@ Página de aterrizaje, de una sola vista, para el servicio de ordenar facturas y
 | --- | --- |
 | `index.html` | Página principal en español: problema, cómo funciona, qué incluye, precio, sobre mí, preguntas y formulario. |
 | `pt.html` | La misma página en portugués de Portugal. |
+| `it.html` | La misma página en italiano. |
 | `impressum.html` | Aviso legal (Impressum). |
 | `datenschutz.html` | Política de privacidad (Datenschutzerklärung). |
 | `assets/styles.css` | CSS ya compilado (Tailwind + estilos propios). Es el que cargan las páginas. |
 | `src/input.css` | Fuente de esos estilos, antes de compilar. |
 | `tailwind.config.js` | Configuración de Tailwind (colores, fuente, sombra). |
 | `package.json` | Script para volver a generar el CSS. |
-| `main.js` | Scroll suave, acordeón de las preguntas, aviso «Pronto en alemán» en las páginas legales y envío del formulario (textos en español o portugués según el idioma de la página). |
+| `main.js` | Scroll suave, acordeón de las preguntas, aviso «Pronto en alemán» en las páginas legales y envío del formulario (textos en español, portugués o italiano según el idioma de la página). |
+| `assets/fonts/` | Fuente Inter (400, 500 y 600) servida desde la propia web, con su licencia OFL. |
 | `og-image.png` | Imagen provisional para Open Graph y Twitter. Las etiquetas `og:image` y `twitter:image` apuntan a este archivo. Sustitúyela antes de publicar si quieres otra. |
 
 ## Verla en local
 
 Abre `index.html` en el navegador (doble clic, o arrástrala a una ventana). No hace falta instalar nada ni arrancar un servidor: `assets/styles.css` ya está en el repositorio.
 
-Hace falta internet solo para la fuente Inter (Google Fonts). Sin conexión se ve igual, con la fuente del sistema.
+No hace falta internet: la fuente Inter está en `assets/fonts/` (licencia OFL, en `assets/fonts/OFL.txt`). La web no carga nada de Google Fonts ni de otros servidores.
 
 ## Volver a generar el CSS
 
@@ -43,13 +45,13 @@ No hay ningún alojamiento activado: ni GitHub Pages, ni Netlify, ni Vercel. Cua
 3. En **Build and deployment**, elige **Deploy from a branch**.
 4. En **Branch**, elige `main` y la carpeta **`/ (root)`**. Guarda.
 5. Espera a que quede publicada en `https://gpastoraltarriba.github.io/facturas-en-orden/`.
-6. Cuando tenga una dirección definitiva, conviene cambiar `og:image` y `twitter:image` a la URL absoluta de `og-image.png`.
+6. `og:image` y `twitter:image` ya apuntan a la URL absoluta de GitHub Pages. Si cambia la dirección (dominio propio), actualízalas en `index.html`, `pt.html` e `it.html`.
 
 ## Contacto y qué queda provisional
 
 - **Email.** `g.pastor.altarriba@gmail.com`, en el pie de las páginas y en los textos legales.
-- **WhatsApp.** El botón abre `https://wa.me/41772020493`. En `index.html` el mensaje es «Hola Gerard, me interesa la revisión gratis de Facturas en orden». En `pt.html` es «Olá Gerard, tenho interesse na revisão gratuita do Facturas en orden». Cada enlace está una sola vez: el `href` de `#whatsapp` (comentario `WHATSAPP_URL`).
-- **Idiomas.** En `index.html` y `pt.html`, la cabecera tiene el selector ES | PT. El idioma actual va marcado con `aria-current="page"`.
+- **WhatsApp.** El botón abre `https://wa.me/41772020493`. En `index.html` el mensaje es «Hola Gerard, me interesa la revisión gratis de Facturas en orden». En `pt.html` es «Olá Gerard, tenho interesse na revisão gratuita do Facturas en orden». En `it.html` es «Ciao Gerard, mi interessa la verifica gratuita di Facturas en orden». Cada enlace está una sola vez: el `href` de `#whatsapp` (comentario `WHATSAPP_URL`).
+- **Idiomas.** En `index.html`, `pt.html` e `it.html`, la cabecera tiene el selector ES | PT | IT. El idioma actual va marcado con `aria-current="page"`.
 - **Imagen para redes.** `og-image.png` es un gráfico provisional (marino y ámbar), no una foto. La foto de «Sobre mí» también es un recuadro con la inicial.
 - **Alemán.** En `impressum.html` y `datenschutz.html` el botón DE no cambia el idioma. Muestra «Pronto en alemán».
 

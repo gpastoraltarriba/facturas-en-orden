@@ -2,6 +2,8 @@
 <html lang="pt-PT">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src https://formspree.io; form-action https://formspree.io; base-uri 'none'; object-src 'none'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Facturas en orden — As suas faturas, organizadas sozinhas</title>
     <meta name="description" content="Para bares, restaurantes, ofícios e empresas de limpeza em St. Gallen. Tire uma fotografia ao talão e nós fazemos com que chegue organizado ao seu contabilista.">
@@ -9,25 +11,25 @@
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23102033'/%3E%3Crect x='9' y='6' width='14' height='20' rx='2' fill='%23F4F6F8'/%3E%3Crect x='12' y='12' width='8' height='1.6' rx='.8' fill='%236F5433'/%3E%3Crect x='12' y='16' width='8' height='1.6' rx='.8' fill='%23102033'/%3E%3Crect x='12' y='20' width='5' height='1.6' rx='.8' fill='%23102033'/%3E%3C/svg%3E" type="image/svg+xml">
     <link rel="alternate" hreflang="es" href="https://gpastoraltarriba.github.io/facturas-en-orden/">
     <link rel="alternate" hreflang="pt-PT" href="https://gpastoraltarriba.github.io/facturas-en-orden/pt.html">
+    <link rel="alternate" hreflang="it" href="https://gpastoraltarriba.github.io/facturas-en-orden/it.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_PT">
     <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="it_IT">
     <meta property="og:site_name" content="Facturas en orden">
     <meta property="og:title" content="Facturas en orden — As suas faturas, organizadas sozinhas">
     <meta property="og:description" content="Para bares, restaurantes, ofícios e empresas de limpeza em St. Gallen. Tire uma fotografia ao talão e nós fazemos com que chegue organizado ao seu contabilista.">
     <!-- Placeholder: sustituir og-image.png si quieres otra imagen antes de publicar. -->
-    <meta property="og:image" content="og-image.png">
+    <meta property="og:image" content="https://gpastoraltarriba.github.io/facturas-en-orden/og-image.png">
     <meta property="og:image:alt" content="Facturas en orden. St. Gallen.">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Facturas en orden — As suas faturas, organizadas sozinhas">
     <meta name="twitter:description" content="Para bares, restaurantes, ofícios e empresas de limpeza em St. Gallen. Tire uma fotografia ao talão e nós fazemos com que chegue organizado ao seu contabilista.">
-    <meta name="twitter:image" content="og-image.png">
+    <meta name="twitter:image" content="https://gpastoraltarriba.github.io/facturas-en-orden/og-image.png">
     <meta name="twitter:image:alt" content="Facturas en orden. St. Gallen.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/styles.css">
   </head>
   <body class="flex min-h-screen flex-col font-sans text-ink antialiased">
@@ -49,6 +51,8 @@
           <a class="lang-option" href="index.html" hreflang="es" lang="es">ES</a>
           <span class="lang-sep" aria-hidden="true">|</span>
           <a class="lang-option" href="pt.html" hreflang="pt-PT" lang="pt-PT" aria-current="page">PT</a>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <a class="lang-option" href="it.html" hreflang="it" lang="it">IT</a>
         </nav>
         <a class="btn btn-primary hidden lg:inline-flex" href="#contacto">Revisão gratuita</a>
       </div>
@@ -238,7 +242,7 @@
               </button>
             </h3>
             <div id="faq-dados" class="faq-panel" role="region" aria-labelledby="faq-dados-btn" hidden>
-              <p>Ficam guardados em serviços com servidores na Europa/Suíça e só você e o seu contabilista têm acesso.</p>
+              <p>As suas faturas ficam guardadas numa conta Google só para o seu negócio (Gmail, Drive e Folhas de Cálculo). Quem as lê é o Gemini, a IA da Google, no serviço pago, que não usa os seus dados para melhorar os produtos da Google. A Google pode tratá-los também fora da Suíça. Têm acesso você, o seu contabilista e eu, só para manter o sistema. Antes de começar assinamos um acordo de tratamento de dados. Mais detalhes na <a class="text-link" href="datenschutz.html">política de privacidade (em espanhol)</a>.</p>
             </div>
             <h3 class="m-0 border-t border-line">
               <button type="button" class="faq-trigger" id="faq-movil-btn" aria-expanded="false" aria-controls="faq-movil">
@@ -280,11 +284,11 @@
             <div class="grid gap-5 sm:grid-cols-2">
               <div>
                 <label class="label" for="nombre">Nome <span class="req" aria-hidden="true">*</span><span class="sr-only"> (obrigatório)</span></label>
-                <input class="field" id="nombre" name="nombre" type="text" autocomplete="name" required>
+                <input class="field" id="nombre" name="nombre" type="text" maxlength="100" autocomplete="name" required>
               </div>
               <div>
                 <label class="label" for="negocio">Nome do negócio <span class="req" aria-hidden="true">*</span><span class="sr-only"> (obrigatório)</span></label>
-                <input class="field" id="negocio" name="nombre_del_negocio" type="text" autocomplete="organization" required>
+                <input class="field" id="negocio" name="nombre_del_negocio" type="text" maxlength="150" autocomplete="organization" required>
               </div>
             </div>
             <div>
@@ -300,18 +304,19 @@
             <div class="grid gap-5 sm:grid-cols-2">
               <div>
                 <label class="label" for="email">E-mail <span class="req" aria-hidden="true">*</span><span class="sr-only"> (obrigatório)</span></label>
-                <input class="field" id="email" name="email" type="email" inputmode="email" autocomplete="email" required>
+                <input class="field" id="email" name="email" type="email" maxlength="254" inputmode="email" autocomplete="email" required>
               </div>
               <div>
                 <label class="label" for="telefono">Telefone / WhatsApp <span class="opt">(opcional)</span></label>
-                <input class="field" id="telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel">
+                <input class="field" id="telefono" name="telefono" type="tel" maxlength="30" inputmode="tel" autocomplete="tel">
               </div>
             </div>
             <div>
               <label class="label" for="mensaje">Mensagem <span class="opt">(opcional)</span></label>
-              <textarea class="field" id="mensaje" name="mensaje" rows="5"></textarea>
+              <textarea class="field" id="mensaje" name="mensaje" rows="5" maxlength="2000"></textarea>
             </div>
             <button class="btn btn-primary w-full" type="submit">Pedir a minha revisão gratuita (15 min)</button>
+            <p class="text-sm text-muted">Ao enviar, os seus dados chegam à Formspree (EUA) para que eu lhe possa responder. Mais informação na <a class="text-link" href="datenschutz.html">política de privacidade (em espanhol)</a>.</p>
           </form>
         </div>
       </section>
@@ -322,8 +327,8 @@
         <p class="text-sm font-medium text-[#E7EBF0]">Facturas en orden · St. Gallen</p>
         <a class="footer-link text-sm" href="mailto:g.pastor.altarriba@gmail.com">g.pastor.altarriba@gmail.com</a>
         <nav class="flex flex-wrap gap-x-5 gap-y-2 text-sm" aria-label="Informação legal">
-          <a class="footer-link" href="impressum.html">Aviso legal <span lang="de">(DE)</span></a>
-          <a class="footer-link" href="datenschutz.html">Privacidade <span lang="de">(DE)</span></a>
+          <a class="footer-link" href="impressum.html">Aviso legal <span lang="es">(ES)</span></a>
+          <a class="footer-link" href="datenschutz.html">Privacidade <span lang="es">(ES)</span></a>
         </nav>
       </div>
     </footer>
