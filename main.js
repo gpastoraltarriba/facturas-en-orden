@@ -1,7 +1,7 @@
 /* Facturas en orden — JS mínimo: scroll, FAQ y formulario.
    El aviso «Pronto en alemán» sigue en impressum.html y datenschutz.html (.lang-de).
-   El enlace de WhatsApp está en el href de #whatsapp (index.html y pt.html).
-   Los textos del formulario salen en español o en portugués según <html lang>. */
+   El enlace de WhatsApp está en el href de #whatsapp (index.html, pt.html e it.html).
+   Los textos del formulario salen en español, portugués o italiano según <html lang>. */
 (function () {
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -65,8 +65,21 @@
   var status = document.getElementById("form-status");
   var submit = form.querySelector('[type="submit"]');
   var submitLabel = submit ? submit.textContent : "";
-  var pt = (document.documentElement.lang || "").toLowerCase().indexOf("pt") === 0;
-  var copy = pt
+  var lang = (document.documentElement.lang || "").toLowerCase();
+  var it = lang.indexOf("it") === 0;
+  var pt = lang.indexOf("pt") === 0;
+  var copy = it
+    ? {
+        valueMissing: "Compili questo campo.",
+        typeMismatch: "Inserisca un indirizzo email valido.",
+        bad: "Controlli questo campo.",
+        sending: "Invio in corso…",
+        success:
+          "Fatto. Ho ricevuto il Suo messaggio. Le scrivo per fissare la verifica di 15 minuti.",
+        error:
+          "Non è stato possibile inviare. Controlli la connessione e riprovi, oppure mi scriva su WhatsApp.",
+      }
+    : pt
     ? {
         valueMissing: "Preencha este campo.",
         typeMismatch: "Escreva um e-mail válido.",
